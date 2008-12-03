@@ -1,12 +1,12 @@
 GEM_NAME = "rspec_merb_helpers"
-GEM_VERSION = "0.0.2"
+GEM_VERSION = "0.0.3"
 
 Gem::Specification.new do |s| 
   s.name = GEM_NAME
   s.version = GEM_VERSION
-  s.author = "Laurynas Liutkus"
-  s.email = "laurynasl@gmail.com"
-  s.homepage = "http://github.com/laurynasl/rspec_merb_helpers/"
+  s.author = "ateam"
+  s.email = "ateam.web@gmail.com"
+  s.homepage = "http://a-team.lt"
   s.platform = Gem::Platform::RUBY
   s.summary = "Helper methods for testing MERB applications"
   s.files = [
