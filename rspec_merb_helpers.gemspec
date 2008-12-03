@@ -1,5 +1,5 @@
 GEM_NAME = "rspec_merb_helpers"
-GEM_VERSION = "0.0.3"
+GEM_VERSION = "0.0.4"
 
 Gem::Specification.new do |s| 
   s.name = GEM_NAME
@@ -19,6 +19,4 @@ Gem::Specification.new do |s|
   ]
   s.has_rdoc = true
   s.extra_rdoc_files = ["README"]
-  s.add_dependency("rspec", ">= 1.1.4")
-  s.add_dependency("merb", ">= 0.9.9")
 end
