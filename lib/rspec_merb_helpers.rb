@@ -86,4 +86,12 @@ module RSpecMerbHelpers
     end
   end
 
+  def fixture_file_upload(filename, content_type = 'image/png')
+    {
+      'tempfile' => File.open(filename),
+      'content_type' => content_type,
+      'filename' => File.basename(filename)
+    }
+  end
+
 end
