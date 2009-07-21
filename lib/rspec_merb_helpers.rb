@@ -45,7 +45,7 @@ module RSpecMerbHelpers
     fields.each do |field|
       it "should have #{field}" do
         original_object = instance_variable_get(object_name)
-        object = original_object.class.new(original_object.values.except(field))
+        object = original_object.class.new(original_object.values.except(field, original_object.primary_key))
         object.should_not be_valid
       end
     end
@@ -56,7 +56,7 @@ module RSpecMerbHelpers
       object = instance_variable_get(object_name)
       freeze_time!
       object.save
-      object.created_at.should == Time.now
+      object.created_at.to_s.should == Time.now.to_s
     end
   end
 
@@ -66,13 +66,13 @@ module RSpecMerbHelpers
       freeze_time!
       created_at = Time.now
       object.save
-      object.created_at.should == created_at
-      object.updated_at.should == created_at
+      object.created_at.to_s.should == created_at.to_s
+      object.updated_at.to_s.should == created_at.to_s
 
       freeze_time!(Time.now + 24.hours)
       object.save
-      object.created_at.should == created_at
-      object.updated_at.should == Time.now
+      object.created_at.to_s.should == created_at.to_s
+      object.updated_at.to_s.should == Time.now.to_s
     end
   end
 
