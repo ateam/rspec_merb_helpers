@@ -1,9 +1,9 @@
-GEM_NAME = "rspec_merb_helpers"
-GEM_VERSION = "0.0.6"
+gem_name = "rspec_merb_helpers"
+gem_version = "0.0.6"
 
 Gem::Specification.new do |s| 
-  s.name = GEM_NAME
-  s.version = GEM_VERSION
+  s.name = gem_name
+  s.version = gem_version
   s.author = "ateam"
   s.email = "ateam.web@gmail.com"
   s.homepage = "http://a-team.lt"
