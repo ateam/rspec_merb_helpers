@@ -1,6 +1,6 @@
 module RSpecMerbHelpers
   def it_should_have_restful_routes(klass)
-    controller = klass.to_s.underscore
+    controller = klass.to_s.snake_case
     describe klass, "routes" do
       it "should be restful" do
         request_to("/#{controller}/5/edit").should == {
